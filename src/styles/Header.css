@@ -1,0 +1,30 @@
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 3vw;
+  outline: 1px solid rgb(118, 118, 118);
+  box-shadow: 0 0 6px rgb(118, 118, 118);
+  padding: 10px;
+}
+
+.header-container .title {
+  margin: auto;
+}
+
+.header-container img {
+  height: 32px;
+  cursor: pointer;
+  filter: brightness(0) invert(1);
+  transition: transform .2s ease-in 
+}
+
+.header-container img:hover {
+    transform: scale(1.1);
+}
+
+@media (prefers-color-scheme: light) {
+  .header-container img {
+    filter: brightness(0) invert(0);
+  }
+}

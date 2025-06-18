@@ -1,0 +1,105 @@
+.content-container {
+  padding: 10px;
+  background-color: rgb(47, 47, 47);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content-container .stats-container {
+  background-color: rgb(52, 52, 52);
+  display: flex;
+  justify-content: space-between;
+  gap: 4vw;
+  min-width: 50%;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+.content-container .stats-container .title {
+  color: rgb(185, 185, 185);
+}
+
+.content-container .stats-container .counter {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.content-container .stats-container .score-stat,
+.best-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content-container .cards-container {
+  /* background-color: rgb(206, 137, 137); */
+  display: grid;
+  grid-template-columns: repeat(8, 140px);
+  gap: 20px;
+  user-select: none;
+}
+
+.content-container .cards-container .card {
+  background-color: rgb(52, 52, 52);
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.2s ease-in;
+}
+
+.content-container .cards-container .card:hover {
+  border-color: rgb(228, 228, 228);
+  transform: scale(1.03);
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.05);
+}
+
+.content-container .cards-container .card img {
+  max-width: 100px;
+  max-height: 200px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  border-radius: 10px;
+}
+
+.content-container .pop-up-loose,
+.content-container .pop-up-win {
+  background-color: rgb(52, 52, 52);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 0;
+  opacity: 0;
+  visibility: hidden;
+  border-radius: 10px;
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transition: all 0.2s ease-in;
+}
+
+.content-container .pop-up-loose.open {
+  font-size: 1.6rem;
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%);
+}
+
+.content-container .pop-up-win.open {
+  font-size: 1.6rem;
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%);
+}
