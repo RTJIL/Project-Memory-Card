@@ -138,6 +138,7 @@ export default function Content() {
           You win, Congrats👍
         </button>
       </div>
+      {(showPopup || isWin()) && <div className={`overlay open`}></div>}
     </div>
   );
 }
